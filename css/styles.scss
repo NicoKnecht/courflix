@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    /*border:1px red solid;*/
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+}
+$leftPadding:5rem;//81px
+
+.header{
+    background-color: rgba(0, 0, 0, 0.8);  
+    display:flex;
+    align-items: center;
+    padding: 0.81rem  5.4rem 0.75rem $leftPadding;
+    position: fixed;/*flota por sobre todo*/
+    top:0;
+    left: 0;
+    width: 100%;
+
+    .logo-wrapper{
+        margin-right:5.4rem;//87px aprox
+        flex-shrink:0;
+        img{
+            display: block;
+            width:100% ;
+        }
+    }
+
+    .nav-wrapper{
+        display:flex;
+
+        .link{
+            color:#fff;
+            text-decoration:none;
+            font-weight: 600;
+            
+            &:not(:last-of-type){
+                margin-right:1.68rem;
+                }
+        }
+    }
+}
+
+.main-content{
+    .cover-wrapper{
+        background-color:#5d5959 ;
+        background-image: url("../img/blackSummer.svg");
+        background-size: cover;
+        background-position: center;
+        min-height: 80vh;/*quizas sacar luego*/
+        padding:12.9rem 0rem  2.6rem $leftPadding; 
+
+        .cover-content-wrapper{
+            color:#fff;
+            max-width:45vw;// para que el tituloquede en 2 lineas
+
+            .titles-wrapper{
+                .original{
+                    font-weight:600;
+                    font-size:1.95vw;//1.75rem;
+                }
+                .title{
+                    font-weight:700;
+                    font-size: 8.3vw;//7.5rem;
+                    line-height:0.83em ;
+                    margin-bottom:0.94rem ;
+                }
+            }
+            .action-buttons{
+                display:flex;
+                margin-bottom:1.7rem;
+                .action{
+                    background-color:rgba(157, 151, 151, 0.5); 
+                    color:#fff;
+                    font-size:21px;
+                    padding:1.25rem 2.82rem;
+                    border-radius: 0.63rem;
+                    text-decoration: none;
+
+
+                    &:not(:last-of-type){
+                        margin-right:2.18rem;
+                    }
+                }
+
+            }
+            .description-wrapper{
+                .content-season{
+                    font-size: 1.5rem;
+                    margin-bottom:0.94rem ;
+                }
+                .description-text{
+                    font-size: 1.5rem;
+                    line-height:1.5em;
+                }
+            }
+        }    
+    }
+    .catalogue-wrapper{
+        padding:2.5rem 0px 0.6rem $leftPadding ;
+        &:before{
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+            //ver concretamente como hacerlo
+        }
+        .catalogue{
+            margin-bottom:3.13rem ;
+            
+            //barras en "continua viendo"
+            &:nth-last-of-type(2){
+                .progress-bar{
+                    background-color:#858585;
+                    height:8px;
+                    
+                    .progress{
+                        background-color: #c60f0e;
+                        height: 100%;//que ocupe todo .progress-bar
+                        width:40%;
+                        }
+                    }
+                }
+            .catalogue-title{
+                color:white;
+                font-size:1.5rem;
+                font-weight: 600;
+                margin-bottom:1.3rem;
+            }
+            .catalogue-content-wrapper{
+                display:flex;
+                overflow-x:auto;
+
+                .catalogue-serie{
+                    min-width:22rem ;
+                    
+                    &:not(:last-of-type){
+                        margin-right:1rem ;
+                    }
+
+                    .catalogue-img{
+                        display: block;
+                        width: 100%;
+                        
+                    }
+                }
+                
+            }             
+        }
+    }
+}
+

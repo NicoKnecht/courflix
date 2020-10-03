@@ -1,0 +1,10 @@
+COURFLIX:
+
+-hay 3 html.
+
+1ro: 1er y 2da imagen.
+
+2da: 3ra imagen(los links con las imagenes de las series de la primera, deben llevar a esta)
+
+3ra:Boton reproducir(lleva a 3ra imagen de mobile. LISTA DE CAPITULOS)
+

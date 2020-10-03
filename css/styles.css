@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*border:1px red solid;*/
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.81rem 5.4rem 0.75rem 5rem;
+  position: fixed;
+  /*flota por sobre todo*/
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header .logo-wrapper {
+  margin-right: 5.4rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.header .logo-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.header .nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .nav-wrapper .link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header .nav-wrapper .link:not(:last-of-type) {
+  margin-right: 1.68rem;
+}
+
+.main-content .cover-wrapper {
+  background-color: #5d5959;
+  background-image: url("../img/blackSummer.svg");
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  /*quizas sacar luego*/
+  padding: 12.9rem 0rem 2.6rem 5rem;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper {
+  color: #fff;
+  max-width: 45vw;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper .titles-wrapper .original {
+  font-weight: 600;
+  font-size: 1.95vw;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper .titles-wrapper .title {
+  font-weight: 700;
+  font-size: 8.3vw;
+  line-height: 0.83em;
+  margin-bottom: 0.94rem;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper .action-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.7rem;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper .action-buttons .action {
+  background-color: rgba(157, 151, 151, 0.5);
+  color: #fff;
+  font-size: 21px;
+  padding: 1.25rem 2.82rem;
+  border-radius: 0.63rem;
+  text-decoration: none;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper .action-buttons .action:not(:last-of-type) {
+  margin-right: 2.18rem;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper .description-wrapper .content-season {
+  font-size: 1.5rem;
+  margin-bottom: 0.94rem;
+}
+
+.main-content .cover-wrapper .cover-content-wrapper .description-wrapper .description-text {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+
+.main-content .catalogue-wrapper {
+  padding: 2.5rem 0px 0.6rem 5rem;
+}
+
+.main-content .catalogue-wrapper:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(#000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+}
+
+.main-content .catalogue-wrapper .catalogue {
+  margin-bottom: 3.13rem;
+}
+
+.main-content .catalogue-wrapper .catalogue:nth-last-of-type(2) .progress-bar {
+  background-color: #858585;
+  height: 8px;
+}
+
+.main-content .catalogue-wrapper .catalogue:nth-last-of-type(2) .progress-bar .progress {
+  background-color: #c60f0e;
+  height: 100%;
+  width: 40%;
+}
+
+.main-content .catalogue-wrapper .catalogue .catalogue-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+}
+
+.main-content .catalogue-wrapper .catalogue .catalogue-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+}
+
+.main-content .catalogue-wrapper .catalogue .catalogue-content-wrapper .catalogue-serie {
+  min-width: 22rem;
+}
+
+.main-content .catalogue-wrapper .catalogue .catalogue-content-wrapper .catalogue-serie:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.main-content .catalogue-wrapper .catalogue .catalogue-content-wrapper .catalogue-serie .catalogue-img {
+  display: block;
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
