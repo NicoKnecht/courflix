@@ -1,9 +1,9 @@
-
+/*General*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 *{
     box-sizing: border-box;
-    /*border:1px red solid;*/
+   /* border:1px red solid;*/
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -11,6 +11,8 @@ body{
 }
 $leftPadding:5rem;//81px
 
+$leftPaddingMobile:1rem;
+/*Header*/
 .header{
     background-color: rgba(0, 0, 0, 0.8);  
     display:flex;
@@ -21,9 +23,22 @@ $leftPadding:5rem;//81px
     left: 0;
     width: 100%;
 
+    @media only screen and (max-width: 1024px){
+        padding: 0.81rem  1rem 0.75rem $leftPadding;
+    }
+
+    @media only screen and (max-width: 769px){
+        padding: 0.81rem  1rem 0.75rem $leftPaddingMobile;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        
+    }
     .logo-wrapper{
         margin-right:5.4rem;//87px aprox
-        flex-shrink:0;
+
+        @media only screen and (max-width: 1024px){
+            min-width:8rem ;
+        }
         img{
             display: block;
             width:100% ;
@@ -32,63 +47,123 @@ $leftPadding:5rem;//81px
 
     .nav-wrapper{
         display:flex;
-
+        @media only screen and (max-width: 769px){
+            display: none;
+        }
+       
         .link{
             color:#fff;
             text-decoration:none;
             font-weight: 600;
+
+            @media only screen and (max-width: 1024px){
+                display:block;
+                width: 100%;
+                font-size:1.7vw;
+            }
             
             &:not(:last-of-type){
                 margin-right:1.68rem;
                 }
         }
     }
+    .nav-mobile-container{
+        @media only screen and (min-width: 770px){
+            display:none;
+        }
+        .hamburguer-img{
+            margin-right:1.25rem ;
+            span{
+                color:white;
+                font-size:2.4rem;
+            }
+            }
+    .nav-mobile-wrapper{
+        display:none;
+    }   
+    }
 }
-
+/*Main*/
 .main-content{
     .cover-wrapper{
         background-color:#5d5959 ;
         background-image: url("../img/blackSummer.svg");
         background-size: cover;
         background-position: center;
-        min-height: 80vh;/*quizas sacar luego*/
         padding:12.9rem 0rem  2.6rem $leftPadding; 
+        width: 100%;
 
+        @media only screen and (max-width: 769px){
+            padding:12.9rem 0rem  2.6rem $leftPaddingMobile;
+        }
+       
         .cover-content-wrapper{
             color:#fff;
-            max-width:45vw;// para que el tituloquede en 2 lineas
-
+            max-width:30rem;// para que el tituloquede en 2 lineas
+            @media only screen and (min-width: 1441px){
+                max-width:40vw;
+            }
             .titles-wrapper{
                 .original{
                     font-weight:600;
                     font-size:1.95vw;//1.75rem;
+
+                    @media only screen and (max-width: 769px){
+                        display:none;
+                    }
                 }
                 .title{
                     font-weight:700;
                     font-size: 8.3vw;//7.5rem;
                     line-height:0.83em ;
                     margin-bottom:0.94rem ;
+
+                    @media only screen and (max-width: 769px){
+                        margin-bottom:0.5rem ;
+                    }
+                    
+                }
+                .serie-data{
+                    margin-bottom:0.94rem;
+                    font-size:5.6vw;
+                    font-weight: 300;
+                    @media only screen and (min-width: 770px){
+                        display:none;
                 }
             }
+        }
             .action-buttons{
                 display:flex;
-                margin-bottom:1.7rem;
+                margin-bottom:1.7rem;  
                 .action{
                     background-color:rgba(157, 151, 151, 0.5); 
                     color:#fff;
-                    font-size:21px;
+                    font-size:1.31rem;
+                    text-align: center;
                     padding:1.25rem 2.82rem;
                     border-radius: 0.63rem;
                     text-decoration: none;
-
+                    
 
                     &:not(:last-of-type){
                         margin-right:2.18rem;
+                    }
+                    @media only screen and (max-width: 769px){
+                        font-size: 3.3vw;
+                        padding:15px 40px;
+
+                        &:not(:last-of-type){
+                            margin-right:1rem;
+                        }
                     }
                 }
 
             }
             .description-wrapper{
+
+                @media only screen and (max-width: 769px){
+                    display:none;
+                }
                 .content-season{
                     font-size: 1.5rem;
                     margin-bottom:0.94rem ;
@@ -102,6 +177,10 @@ $leftPadding:5rem;//81px
     }
     .catalogue-wrapper{
         padding:2.5rem 0px 0.6rem $leftPadding ;
+
+        @media only screen and (max-width: 769px){
+            padding:2.5rem 0px 0.6rem $leftPaddingMobile ;
+        }
         &:before{
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
             //ver concretamente como hacerlo
@@ -109,19 +188,6 @@ $leftPadding:5rem;//81px
         .catalogue{
             margin-bottom:3.13rem ;
             
-            //barras en "continua viendo"
-            &:nth-last-of-type(2){
-                .progress-bar{
-                    background-color:#858585;
-                    height:8px;
-                    
-                    .progress{
-                        background-color: #c60f0e;
-                        height: 100%;//que ocupe todo .progress-bar
-                        width:40%;
-                        }
-                    }
-                }
             .catalogue-title{
                 color:white;
                 font-size:1.5rem;
@@ -130,10 +196,13 @@ $leftPadding:5rem;//81px
             }
             .catalogue-content-wrapper{
                 display:flex;
-                overflow-x:auto;
+                //overflow-x:auto;
 
                 .catalogue-serie{
                     min-width:22rem ;
+                    @media only screen and (max-width: 769px){
+                       // min-width:15rem ;
+                    }
                     
                     &:not(:last-of-type){
                         margin-right:1rem ;
@@ -145,8 +214,22 @@ $leftPadding:5rem;//81px
                         
                     }
                 }
+                //barras en "continua viendo"
+            &:nth-last-of-type(2){
+                .progress-bar{
+                    background-color:#858585;
+                    height:8px;
+                    
+                    .progress{
+                        background-color: #c60f0e;
+                        height: 100%;//que ocupe todo .progress-bar
+                        width:40%;
+                        }
+                    }
+                }        
                 
-            }             
+            } 
+                
         }
     }
 }

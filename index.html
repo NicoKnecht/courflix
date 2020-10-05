@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://kit.fontawesome.com/8d2a6304f1.js" crossorigin="anonymous"></script>
         <title>Courflix</title>
     </head>
     <body>
@@ -19,7 +21,21 @@
                     <a class="link" href="#">Peliculas</a>
                     <a class="link" href="#">Agregados recientemente</a>
                     <a class="link" href="#">Mi lista</a>
-                </nav>   
+                </nav>
+
+                <!--Mobile nav-->
+                <div class="nav-mobile-container">
+                    <div class="hamburguer-img">
+                        <span class="fas fa-bars "></span>
+                    </div>
+                    <nav class="nav-mobile-wrapper">
+                        <a class="link" href="#">Inicio</a>
+                        <a class="link" href="#">Series</a>
+                        <a class="link" href="#">Peliculas</a>
+                        <a class="link" href="#">Agregados recientemente</a>
+                        <a class="link" href="#">Mi lista</a>
+                    </nav>  
+                </div>
         </header>
         <main class="main-content">
                 <section class="cover-wrapper">
@@ -27,6 +43,8 @@
                             <div class="titles-wrapper">
                                 <h3 class="original">Original de COURFLIX</h3>
                                 <h2 class="title">BLACK SUMMER</h2>
+                                <!--Only in mobile-->
+                                <h4 class="serie-data">2019 - 16+ - 1 temporada</h4>
                             </div>
                             <div class="action-buttons">
                                 <a href="#" class="action">Reproducir</a>
@@ -76,7 +94,7 @@
                                     <div class="progress"></div>
                                 </div>
                                 <a href="#" class="catalogue-serie">    
-                                    <img src="img/series-protector.svg" alt="the protector">
+                                    <img src="img/series-protector.svg" class="catalogue-img"  alt="the protector">
                                 </a>    
                                 <div class="progress-bar">
                                     <div class="progress"></div>
@@ -84,11 +102,9 @@
                                 <a href="#" class="catalogue-serie">   
                                     <img src="img/series-flash.svg" class="catalogue-img" alt="flash">
                                 </a>    
-                                    <div class="catalogue seguir-viendo">
-                                        <div class="progress-bar">
-                                            <div class="progress"></div>
-                                        </div>
-                                    </div>   
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
                             </div>
                         </div>    
                         
@@ -110,7 +126,6 @@
                             </div>     
                         </div>
                         
-
                 </section>    
         </main>
         
